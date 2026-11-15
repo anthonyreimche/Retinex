@@ -1,0 +1,4 @@
+node_modules/
+test/reference/.build/
+*.log
+.DS_Store

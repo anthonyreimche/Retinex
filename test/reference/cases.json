@@ -1,0 +1,408 @@
+{
+ "defaults": {
+  "cdcurve": [ 0 ],
+  "cdHcurve": [ 0 ],
+  "lhcurve": [ 0 ],
+  "transmissionCurve": [ 1, 0, 0.5, 0.35, 0.35, 0.6, 0.75, 0.35, 0.35, 1, 0.5, 0.35, 0.35 ],
+  "gaintransmissionCurve": [ 1, 0, 0.1, 0.35, 0, 0.25, 0.25, 0.35, 0.35, 0.7, 0.25, 0.35, 0.35, 1, 0.1, 0, 0 ],
+  "mapcurve": [ 0 ],
+  "str": 20,
+  "scal": 3,
+  "iter": 1,
+  "grad": 1,
+  "grads": 1,
+  "gam": 1.3,
+  "slope": 3,
+  "neigh": 80,
+  "offs": 0,
+  "highlights": 0,
+  "htonalwidth": 80,
+  "shadows": 0,
+  "stonalwidth": 80,
+  "radius": 40,
+  "retinexMethod": "high",
+  "retinexcolorspace": "Lab",
+  "gammaretinex": "none",
+  "mapMethod": "none",
+  "viewMethod": "none",
+  "vart": 200,
+  "limd": 8,
+  "highl": 4,
+  "skal": 3,
+  "medianmap": false
+ },
+ "cases": [
+  {
+   "name": "high, radius 6, threshold 2",
+   "image": 0,
+   "params": {
+    "neigh": 6,
+    "highl": 2
+   }
+  },
+  {
+   "name": "strength 100, radius 12",
+   "image": 0,
+   "params": {
+    "str": 100,
+    "neigh": 6,
+    "highl": 2
+   }
+  },
+  {
+   "name": "low, radius 20, strength 70",
+   "image": 0,
+   "params": {
+    "retinexMethod": "low",
+    "neigh": 10,
+    "str": 70
+   }
+  },
+  {
+   "name": "uniform, radius 15, scale 5",
+   "image": 0,
+   "params": {
+    "retinexMethod": "uni",
+    "neigh": 8,
+    "skal": 5,
+    "str": 60
+   }
+  },
+  {
+   "name": "highlight with strength by hue",
+   "image": 1,
+   "params": {
+    "retinexMethod": "highli",
+    "neigh": 6,
+    "str": 80,
+    "lhcurve": [ 1, 0, 0.5, 0.35, 0.35, 0.25, 0.8, 0.35, 0.35, 0.5, 0.3, 0.35, 0.35, 0.75, 0.6, 0.35, 0.35 ],
+    "highl": 2
+   }
+  },
+  {
+   "name": "highlights plus (inert)",
+   "image": 1,
+   "params": {
+    "retinexMethod": "highliplus",
+    "neigh": 6,
+    "str": 80,
+    "highl": 3
+   }
+  },
+  {
+   "name": "HSL logarithmic",
+   "image": 0,
+   "params": {
+    "retinexcolorspace": "HSLLOG",
+    "neigh": 6,
+    "str": 80,
+    "highl": 2
+   }
+  },
+  {
+   "name": "HSL linear",
+   "image": 0,
+   "params": {
+    "retinexcolorspace": "HSLLIN",
+    "neigh": 6,
+    "str": 80,
+    "highl": 2
+   }
+  },
+  {
+   "name": "gamma low",
+   "image": 0,
+   "params": {
+    "gammaretinex": "low",
+    "neigh": 6,
+    "str": 60,
+    "highl": 2
+   }
+  },
+  {
+   "name": "gamma middle",
+   "image": 0,
+   "params": {
+    "gammaretinex": "mid",
+    "neigh": 6,
+    "str": 60,
+    "highl": 2
+   }
+  },
+  {
+   "name": "gamma high",
+   "image": 1,
+   "params": {
+    "gammaretinex": "hig",
+    "neigh": 6,
+    "str": 60,
+    "highl": 2
+   }
+  },
+  {
+   "name": "free gamma 1.3/3",
+   "image": 0,
+   "params": {
+    "gammaretinex": "fre",
+    "neigh": 6,
+    "str": 60,
+    "highl": 2
+   }
+  },
+  {
+   "name": "free gamma 0.8/5",
+   "image": 1,
+   "params": {
+    "gammaretinex": "fre",
+    "gam": 0.8,
+    "slope": 5,
+    "neigh": 6,
+    "str": 60,
+    "highl": 2
+   }
+  },
+  {
+   "name": "L=f(L) spline",
+   "image": 0,
+   "params": {
+    "cdcurve": [ 1, 0, 0, 0.3, 0.42, 0.7, 0.8, 1, 1 ],
+    "neigh": 6,
+    "str": 70,
+    "highl": 2
+   }
+  },
+  {
+   "name": "L=f(L) HSL control cage",
+   "image": 0,
+   "params": {
+    "retinexcolorspace": "HSLLOG",
+    "cdHcurve": [ 3, 0, 0, 0.35, 0.5, 0.7, 0.75, 1, 1 ],
+    "neigh": 6,
+    "str": 70,
+    "highl": 2
+   }
+  },
+  {
+   "name": "L=f(L) flexible",
+   "image": 1,
+   "params": {
+    "cdcurve": [ 4, 0, 0, 0.25, 0.3, 0.6, 0.72, 1, 1 ],
+    "neigh": 6,
+    "str": 70,
+    "highl": 2
+   }
+  },
+  {
+   "name": "L=f(L) parametric",
+   "image": 0,
+   "params": {
+    "cdcurve": [ 2, 0.25, 0.5, 0.75, 20, 10, -15, -20 ],
+    "neigh": 6,
+    "str": 70,
+    "highl": 2
+   }
+  },
+  {
+   "name": "Gaussian mask",
+   "image": 0,
+   "params": {
+    "mapMethod": "gaus",
+    "highlights": 60,
+    "shadows": 40,
+    "htonalwidth": 70,
+    "stonalwidth": 60,
+    "radius": 30,
+    "neigh": 6,
+    "str": 80,
+    "highl": 2
+   }
+  },
+  {
+   "name": "sharp mask partial, 6 scales",
+   "image": 0,
+   "params": {
+    "mapMethod": "map",
+    "skal": 6,
+    "highlights": 50,
+    "shadows": 50,
+    "neigh": 8,
+    "str": 80,
+    "retinexMethod": "uni"
+   }
+  },
+  {
+   "name": "sharp mask total with mask curve",
+   "image": 1,
+   "params": {
+    "mapMethod": "mapT",
+    "mapcurve": [ 1, 0, 0, 0.4, 0.55, 1, 1 ],
+    "highlights": 30,
+    "shadows": 70,
+    "neigh": 6,
+    "str": 80,
+    "highl": 2
+   }
+  },
+  {
+   "name": "view mask",
+   "image": 0,
+   "params": {
+    "viewMethod": "mask",
+    "neigh": 6,
+    "highl": 2
+   }
+  },
+  {
+   "name": "view unsharp",
+   "image": 0,
+   "params": {
+    "viewMethod": "unsharp",
+    "neigh": 6,
+    "str": 50,
+    "highl": 2
+   }
+  },
+  {
+   "name": "view transmission auto",
+   "image": 0,
+   "params": {
+    "viewMethod": "tran",
+    "neigh": 6,
+    "highl": 2
+   }
+  },
+  {
+   "name": "view transmission fixed, median",
+   "image": 0,
+   "params": {
+    "viewMethod": "tran2",
+    "neigh": 6,
+    "medianmap": true,
+    "highl": 2
+   }
+  },
+  {
+   "name": "view transmission auto, no transmission curve",
+   "image": 0,
+   "params": {
+    "viewMethod": "tran",
+    "neigh": 6,
+    "transmissionCurve": [ 0 ],
+    "highl": 2
+   }
+  },
+  {
+   "name": "3 iterations, gradients 2/2/-1",
+   "image": 0,
+   "params": {
+    "iter": 3,
+    "scal": 2,
+    "grad": 2,
+    "grads": -1,
+    "neigh": 6,
+    "str": 60,
+    "highl": 2
+   }
+  },
+  {
+   "name": "5 iterations, low, scale 8, gradient 6",
+   "image": 0,
+   "params": {
+    "iter": 5,
+    "scal": 6,
+    "skal": 8,
+    "retinexMethod": "low",
+    "neigh": 10,
+    "str": 50
+   }
+  },
+  {
+   "name": "2 iterations, gradients -1/-2/2, mask",
+   "image": 1,
+   "params": {
+    "iter": 2,
+    "scal": -1,
+    "grad": -2,
+    "grads": 2,
+    "mapMethod": "mapT",
+    "shadows": 60,
+    "neigh": 6,
+    "str": 60,
+    "highl": 2
+   }
+  },
+  {
+   "name": "median filter",
+   "image": 1,
+   "params": {
+    "medianmap": true,
+    "neigh": 6,
+    "str": 70,
+    "highl": 2
+   }
+  },
+  {
+   "name": "no transmission or gain curves",
+   "image": 0,
+   "params": {
+    "transmissionCurve": [ 0 ],
+    "gaintransmissionCurve": [ 0 ],
+    "neigh": 6,
+    "str": 70,
+    "highl": 2
+   }
+  },
+  {
+   "name": "offset, contrast, threshold",
+   "image": 0,
+   "params": {
+    "offs": 2000,
+    "vart": 60,
+    "limd": 30,
+    "neigh": 6,
+    "str": 70,
+    "highl": 2
+   }
+  },
+  {
+   "name": "scale 1 and 2",
+   "image": 1,
+   "params": {
+    "skal": 1,
+    "neigh": 6,
+    "str": 70,
+    "highl": 2
+   }
+  },
+  {
+   "name": "scale 2, radius 6",
+   "image": 0,
+   "params": {
+    "skal": 2,
+    "neigh": 6,
+    "str": 70,
+    "highl": 2
+   }
+  },
+  {
+   "name": "Rec.2020 working, highlight on",
+   "image": 1,
+   "params": {
+    "neigh": 6,
+    "str": 90,
+    "highl": 2
+   },
+   "working": "rec2020",
+   "hrenabled": true
+  },
+  {
+   "name": "highlight off clips over-white colour",
+   "image": 1,
+   "params": {
+    "neigh": 6,
+    "str": 90,
+    "highl": 2
+   },
+   "hrenabled": false
+  } ]
+}
