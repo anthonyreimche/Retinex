@@ -1,7 +1,7 @@
 {
   "id": "retinex",
   "name": "Retinex",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Multi-scale Retinex on lightness: lifts haze and compresses dynamic range by dividing each pixel by blurred copies of the photo at several scales, then renormalizing from the photo's own statistics. Transmission and gain curves, tone-mapping iterations, shadow and highlight masks, and a highlight-protecting method.",
   "author": "Anthony Reimche",
   "main": "dist/index.js",

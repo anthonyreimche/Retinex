@@ -868,7 +868,7 @@ backends agree.
 
 ## 7. Package
 
-`D:\Repositories\Safelight Project\Retinex`: id `retinex`, version 1.0.0,
+`D:\Repositories\Safelight Project\Retinex`: id `retinex`, version 1.0.1,
 `minAppVersion` 3.2.5, repository `anthonyreimche/Retinex` (assumed),
 GPL-3.0-or-later. `src/`: `index.tsx`, `stage.ts`, `glsl.ts`, `schedule.ts`,
 `model.ts`, `rt-plan.ts`, `curves.ts`, `curve-edit.ts`, `params.ts`,
