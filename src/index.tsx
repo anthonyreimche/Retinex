@@ -44,6 +44,7 @@ export function activate(host: Host): void {
     title: TITLE,
     component: RetinexPanel,
     defaultDock: { module: "develop", direction: "right", width: 280 },
+    modules: ["develop"],
     onReset: reset,
   });
 

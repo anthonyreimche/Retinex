@@ -2766,6 +2766,7 @@ function xn(e) {
 			direction: "right",
 			width: 280
 		},
+		modules: ["develop"],
 		onReset: vn
 	}), $?.(), $t(B(e.stores.useDevelopStore.getState().paramBag).iterations), $ = e.stores.useDevelopStore.subscribe((e, t) => {
 		let n = e.photoId !== t.photoId;

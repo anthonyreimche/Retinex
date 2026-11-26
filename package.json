@@ -1,7 +1,7 @@
 {
   "name": "safelight-retinex",
   "private": true,
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Retinex extension for Safelight: multi-scale Retinex on lightness that lifts haze and compresses dynamic range.",
   "type": "module",
   "scripts": {
